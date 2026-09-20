@@ -336,7 +336,7 @@ class Rules:
         ]
 
         # https://regex101.com/r/EGkRU8/7
-        quotative_pattern = build_optimized_pattern(
+        _quotative_pattern = build_optimized_pattern(
             cls.POST_QUOTATIVE_PARTICLES | cls.REPORTING_WORDS
         )
         cls.QUOTE_AND_PAREN_END_FINDER = re2.compile(
@@ -347,7 +347,7 @@ class Rules:
             )
             (?!  # NOT followed by any continuation markers, punctuation, or space+lowercase
                 \s*[\p{{Po}}\p{{Ll}}\p{{Pe}}]|
-                \s*(?:{quotative_pattern})
+                \s*(?:{_quotative_pattern})
             )
             """,
             re2.X,

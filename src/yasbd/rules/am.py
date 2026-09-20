@@ -57,7 +57,6 @@ class AmRules(Rules):
     }
 
     REPORTING_WORDS = {
-        # Reporting verbs ("said / says", placed after quoted speech)
         "አለ", "አሉ", "አለች", "አልኩ", "አልን", "አልክ", "አልሽ", "አላችሁ",
         "ይላል", "ትላለች", "ይላሉ", "እላለሁ", "እንላለን",
     }
